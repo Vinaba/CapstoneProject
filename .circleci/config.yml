@@ -44,8 +44,8 @@ jobs:
           command: |
             export IMAGE_NAME=capstone
             docker build -t vinaba/$IMAGE_NAME .
-            sudo docker login -u=vinaba -p=$DOCKER_PASS
-            sudo docker push vinaba/capstone:latest
+            docker login -u=vinaba -p=$DOCKER_PASS
+            docker push vinaba/capstone:latest
   deploy-application:
     docker:
       - image: 'cimg/python:3.10'
