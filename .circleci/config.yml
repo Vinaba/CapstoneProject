@@ -102,7 +102,6 @@ workflows:
             - docker-build
       - aws-eks/create-cluster:
           cluster-name: capstone-project
-          node-zones: 'us-east-1a,us-east-1b'
           requires:
             - docker-push
       - deploy-application:
